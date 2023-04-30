@@ -1,0 +1,106 @@
+.intro {
+  display: flex;
+  height: 77vh;
+  margin-top: 6rem;
+}
+.intro-left {
+  display: flex;
+  position: relative;
+  flex: 1;
+  flex-direction: column;
+  gap: 2rem;
+}
+.intro-name {
+  display: flex;
+  flex-direction: column;
+}
+.intro-name > :nth-child(1) {
+  color: var(--black);
+  font-size: 3rem;
+  font-weight: bold;
+}
+.intro-name > :nth-child(2) {
+  color: var(--orange);
+  font-size: 3rem;
+  font-weight: bold;
+}
+.intro-name > :nth-child(3) {
+  color: var(--gray);
+  font-size: 15px;
+  font-weight: 100;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+.intro-button {
+  width: 6rem;
+  height: 2rem;
+}
+.intro-icons {
+  display: flex;
+  margin-top: 3rem;
+  gap: 0rem;
+}
+.intro-icons img {
+  transform: scale(0.5);
+}
+.intro-icons img:hover {
+  cursor: pointer;
+}
+.intro-right {
+  flex: 1;
+  position: relative;
+}
+.intro-right > * {
+  position: absolute;
+  z-index: 1;
+}
+.intro-right > :nth-child(1) {
+  transform: scale(0.69);
+  left: -15%;
+  top: -9%;
+}
+.intro-right > :nth-child(2) {
+  transform: scale(0.67);
+  left: -3rem;
+  top: -4.6rem;
+}
+.intro-right > :nth-child(3) {
+  transform: scale(1.4);
+  left: 28%;
+}
+
+.intro-right > :nth-child(4) {
+  transform: scale(0.62);
+  border-radius: 50%;
+  top: -19%;
+  left: -24%;
+  padding: 0;
+}
+.blur {
+  position: absolute;
+  width: 22rem;
+  height: 14rem;
+  border-radius: 50%;
+  background: #edd0ff;
+  filter: blur(72px);
+  top: -18%;
+  left: 56%;
+  z-index: -9;
+}
+@media screen and (max-width: 480px) {
+  .intro {
+    flex-direction: column;
+    height: 64rem;
+    gap: 7rem;
+  }
+  .intro-right {
+    transform: scale(0.8);
+    left: -3rem;
+  }
+  .intro-right .blur {
+    display: none;
+  }
+  .floating-div:nth-last-of-type(1) {
+    top: -7rem !important;
+  }
+}
